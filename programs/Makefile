@@ -88,8 +88,8 @@ regress-red-verilog-sim: $(patsubst %,%.red-verilog-sim-checked,$(WORKLOADS))
 regress-red-verilog-run: $(patsubst %,%.red-verilog-run-checked,$(WORKLOADS))
 
 %.red-verilog-run-checked: gold/compiled/%.red $(RED)
-	cd ../fpga; ./Red -v ../programs/$< && cp Reduceron/*.mif Reduceron/"BeMicro CV A9"
-	$(MAKE) -C ../fpga/Reduceron/"BeMicro CV A9"
+	cd ../fpga; ./Red -v ../programs/$< && cp Reduceron/*.mif Reduceron/BeMicroCV-A9
+	$(MAKE) -C ../fpga/Reduceron/BeMicroCV-A9
 
 comma:= ,
 empty:=
